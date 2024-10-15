@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóvel Guide</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/logo-imovel-guide.jpg" alt="Imóvel Guide Logo">
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Condomínios</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="#">Guia</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Ferramentas</a></li>
+            </ul>
+        </nav>
+        <div class="menu-direita">
+            <a href="#" class="btn">Cotar Imóvel</a>
+            <a href="#" class="btn">Planos</a>
+            <a href="#" class="btn">Entrar</a>
+            <a href="#" class="btn cadastre-se">CADASTRE-SE</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="column">
+            <div class="corretor-card">
+                <div class="card">
+                    <div class="image-container">
+                        <div class="image-blur-container">
+                            <div class="background-blur" style="background-image: url(img/corretor-1.jpg);"></div>
+                        </div>
+                        <img src="img/corretor-1.jpg" alt="Corretora" class="corretor-img">
+                    </div>
+                    <div class="info">
+                        <h3>Nome Corretora</h3>
+                        <p>3.000 pontos</p>
+                        <button class="show-phone" onclick="showPhone(this)">Ver telefone</button>
+                        <p class="phone" style="display: none;">(99) 99999-9999</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-container">
+                        <div class="image-blur-container">
+                            <div class="background-blur" style="background-image: url(img/corretor-2.jpg);"></div>
+                        </div>
+                        <img src="img/corretor-2.jpg" alt="Corretora" class="corretor-img">
+                    </div>
+                    <div class="info">
+                        <h3>Nome Corretora</h3>
+                        <p>3.000 pontos</p>
+                        <button class="show-phone" onclick="showPhone(this)">Ver telefone</button>
+                        <p class="phone" style="display: none;">(99) 99999-9999</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="form-container">
+                <h3>Mande uma mensagem:</h3>
+                <form id="message-form">
+                    <label for="cpf">Digite seu CPF</label>
+                    <input type="text" id="cpf" placeholder="Digite seu CPF" maxlength="14">
+
+                    <label for="telefone">Digite seu telefone</label>
+                    <input type="text" id="telefone" placeholder="Digite seu telefone" maxlength="14">
+
+                    <label for="assunto">Digite o assunto</label>
+                    <textarea id="assunto" placeholder="Digite o assunto"></textarea>
+
+                    <button type="button" onclick="enviarMensagem()">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="regrade3-container">
+                <h3>Regra de 3</h3>
+                <div class="inputs-row">
+                    <input type="number" id="valor1" placeholder="0" class="input-campo">
+                    <span> = </span>
+                    <input type="number" id="valor2" placeholder="0" class="input-campo">
+                </div>
+                <div class="inputs-row">
+                    <input type="number" id="valor3" placeholder="0" class="input-campo">
+                    <span> = </span>
+                    <input type="text" id="resultado" class="input-campo laranja" readonly>
+                </div>
+                <button type="button" onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+
+        <div class="image-house">
+            <div class="image-container-home">
+                <img src="img/casa.jpg" alt="Imagem do Imóvel" id="image">
+                <button id="openModalBtn">Abrir Imagem no Modal</button>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="img/casa.jpg" alt="Imagem do Modal" id="modalImage" class="modal-img">
+                </div>
+            </div>
+        </div>
+
+        <div id="capture" class="image-container-imovel">
+            <img src="/img/casa.jpg" alt="Imagem da Casa" class="image-home">
+            <div class="retangulo-laranja">
+                <p>Imovel Guide</p>
+            </div>
+        </div>
+
+        <button class="download-btn" id="download-btn">Download</button>
+
+        <div class="image-home-zoom">
+            <img src="img/casa.jpg" alt="Imagem da Casa" class="image-zoom">
+        </div>
+
+        <script src="script.js"></script>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
